@@ -1,0 +1,1117 @@
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+/*Naty por favor recuerda que los hovers del carrousel se ven bien en la compu de adri, a pesar de que nos repartimos las secciones
+a cada una y detallamos nuestros nombres siepre nos mestimos todas en el codigo de cada una*/
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------*/
+/*styles para Home*/
+/*------------------------------------------*/
+/*styles por Micol */
+
+body{
+   margin: 0%;
+}
+
+header {
+   font-family: 'Indie Flower', cursive;
+   text-align: center;
+   color: orangered;
+}
+
+// MOBIBLE:
+
+.navbar-m {
+   width: 100%;
+   background-color: orangered;
+   font-family: 'IBM Plex Mono', monospace;
+   border-radius: 10px;
+
+}
+.dropbtn-m {
+   background-color: orangered;
+   color: white;
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+}
+
+  .dropdown-m {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     .fa-bars {
+         margin-top: 17px;
+         color: white;
+     }
+  }
+
+
+
+.dropdown-content-m {
+   display: none;
+   position: absolute;
+   list-style: none;
+   background-color: orangered;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+}
+
+.dropdown-content-m li {
+   color: white;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   cursor: pointer;
+   a{
+     text-decoration: none;
+     color: white;
+   }
+}
+.menux-mobile {
+   display: block;
+}
+
+.dropdown-content-m li:hover {
+   background-color: orangered;
+}
+.dropdown-m:hover .dropdown-content-m {
+   display: block;
+}
+.dropdown-m:hover .dropbtn-m {
+   background-color: orangered;
+}
+
+.menux-desktop {
+   display: none;
+}
+/* aca finaliza styles por Micol */
+
+/*styles por Adriana Montilla */
+
+.carrousel{
+       display:flex;
+       justify-content:space-between;
+       width: 100%;
+
+   .img-container{
+       display: flex;
+       position: relative;
+       width:100%;
+       height: 450px;
+       font-family: 'IBM Plex Mono', monospace;
+       color: white;
+       &:hover{
+           .hover{
+               height: 30%;
+           }
+       }
+       img{
+           width: 100%;
+       }
+       .hover {
+           position: absolute;
+           bottom: 0%;
+           background-color:orangered;
+           opacity:0.5;
+           width: 100%;
+           transition: height 1s;
+           overflow: hidden;
+           height:0%;
+           .fecha{
+             margin-left: 10px;
+           }
+           .descripcion{
+             margin-left: 10px;
+           }
+
+           }
+       }
+       .nati{
+         display: none;
+       }
+       }
+
+/* aca finaliza styles por Adriana Montilla */
+
+/*styles por Micol */
+.secciones {
+   flex-direction: column;
+   .container {
+       width: 200px;
+       position: relative;
+   }
+   .img-container {
+       width: 300px;
+       height: 200px;
+   }
+   .img-container img {
+       width: 100%;
+   }
+   .button {
+       width: 150px;
+       border-radius: 10px;
+       font-family: 'IBM Plex Mono', monospace;
+       text-align: center;
+       background-color: #ddd;
+       position: absolute;
+       top: 60px;
+       left: 70px;
+
+   }
+   &:hover {
+      cursor: pointer;
+      .button:hover {
+        background-color: orangered;
+      }
+
+   }
+
+   .link-r {
+     text-decoration: none;
+     color: black;
+   }
+
+}
+/*aca finaliza styles por Micol */
+
+/*styles por Mercedes Ventocilla */
+/*variables, mixins*/
+$colorTexto: #929292;
+@mixin texto_descripcion_arriba{
+  font-family: 'IBM Plex Mono', monospace;
+  color: $colorTexto;
+  font-size: 14px;
+}
+
+@mixin texto_descripcion_iconos{
+  font-size: 15px;
+  color: $colorTexto;
+}
+
+@mixin estilos_titulo_entrada{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@mixin estilos_cuerpo_entrada{
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: normal;
+  color: $colorTexto;
+  font-size: 17px;
+}
+
+@mixin box_perfil (){
+  font-size: 15px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  width: 90%;
+  height: 30px;
+  margin: auto;
+  background-color: #FDE2DA;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*section: video_perfil_notas | video*/
+body{
+  margin:0;
+  .fila_video_perfil{
+    .video{
+      display: none;
+      .video_descripcion{
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 10px;
+        color: $colorTexto;
+      }
+    }
+  }
+}
+
+/*section: video_perfil_notas | notas*/
+
+.video_perfil_notas{
+  display: flex;
+  flex-direction: column-reverse;
+  .fila_notas{
+    .nota-1{
+      width: 90%;
+      margin: auto;
+       .img_nota_container{
+         display: none;
+       }
+      }
+    }
+  }
+
+.video_perfil_notas{
+  .fila_notas{
+    .linea_nota{
+      display: none;
+    }
+    .nota-1:last-child{
+      display: none;
+    }
+  }
+}
+
+.nota-1{
+  .fecha_comentarios{
+    display: flex;
+    justify-content: space-between;
+    .mayo{
+      width: 50%;
+      text-align: center;
+      @include texto_descripcion_arriba;
+      p{
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+
+ .fecha_comentarios{
+  .iconos{
+    @include texto_descripcion_arriba;
+    display: block;
+    width: 28%;
+    .iconos_primero{
+      display: flex;
+      margin: auto;
+      width: 80%;
+      .icon_heart{
+        @include texto_descripcion_iconos;
+      }
+      .favoritos{
+        margin-right: 15px;
+      }
+      .icon_comment{
+        @include texto_descripcion_iconos;
+      }
+    }
+  }
+ }
+
+ .fecha_comentarios{
+   .iconos{
+       .icon_share{
+         @include texto_descripcion_iconos;
+         margin: auto;
+         width: 12%;
+       }
+   }
+ }
+
+ .texto_descripcion{
+   .titulo_entrada{
+    @include estilos_titulo_entrada;
+    text-align: center;
+   }
+   .cuerpo_entrada{
+    @include estilos_cuerpo_entrada;
+    text-align: center;
+
+   }
+     button{
+       background-color: #FDE2DA;
+       color: black;
+       font-family: 'IBM Plex Mono', monospace;
+       font-size: 14px;
+       border: none;
+       width: 120px;
+       height: 40px;
+       border-radius: 8px;
+       font-weight: bold;
+       margin-top: 20px;
+     }
+ }
+
+/*video_perfil_notas | perfil*/
+  .perfil{
+    .sobremi{
+      @include box_perfil;
+    }
+    .foto{
+      border-radius: 50%;
+      width: 68%;
+      height: 240px;
+      margin: 21px auto;
+      img{
+        width: 100%;
+        height: 240px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .perfil{
+    .presentacion{
+      width: 90%;
+      margin: auto;
+      .nombre{
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 26px;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+      }
+      .edad{
+        font-family: 'IBM Plex Mono', monospace;
+        color: $colorTexto;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .perfil{
+    .Newsletter{
+      @include box_perfil;
+    }
+  }
+  /*aca finaliza styles por Mercedes Ventocilla */
+
+  /*styles por Magalí */
+  footer{
+    border-bottom: 2px solid #E6E6E6;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'IBM plex mono', monospace;
+    color:#A4A4A4;
+    font-size: 18px;
+    margin-top: 36px;
+
+    i{
+        padding-bottom: 60px;
+    }
+    span{
+      display: none;
+    }
+
+    .arrow{
+        color: #FB8A01;
+        font-size: 50px;
+        position: absolute;
+        text-align: center;
+        margin-top: 60px;
+    }
+ }
+ /*aca finaliza styles por Magalí */
+/*aca finaliza styles para Home*/
+/*------------------------------------------*/
+/*styles para Recetas*/
+/*------------------------------------------*/
+/*styles por Mercedes Ventocilla */
+
+body{
+  margin: 0;
+}
+.main-container{
+  .banner{
+    width: 100%;
+    margin-top: 25px;
+    figure{
+      margin: 0;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+/* aca finaliza styles por Mercedes Ventocilla */
+
+.casa{
+  font-family: 'IBM plex mono', monospace;
+  .casa-container {
+    width: 90%;
+    margin-left:20px;
+    margin-top: 20px;
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+    .primer_container{
+      display: flex;
+      p{
+        margin: 0;
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 10px;
+        &::after{
+          content: ">";
+          margin-left: 10px;
+        }
+     }
+     .casita{
+       display: flex;
+       .fa-home{
+         font-size: 18px;
+         margin-top:2px;
+       }
+     }
+    }
+
+   .single{
+     color: #929292;
+     p{
+       font-size: 18px;
+       font-weight: bold;
+       &::after{
+         content: "";
+     }
+     }
+    }
+  }
+
+ }
+ /*aca finaliza styles por Adri Montilla */
+
+ /*styles por Mercedes Ventocilla */
+
+ @mixin styles_caja-redes{
+   border-radius: 50%;
+   position: relative;
+   margin: 8px;
+ }
+
+ @mixin size-mobile_caja-redes{
+   width: 50px;
+   height: 50px;
+ }
+
+ @mixin size-desktop_caja-redes{
+   width: 25px;
+   height: 25px;
+ }
+
+ @mixin styles_icono-redes{
+   position: absolute;
+   color: #fff;
+ }
+
+
+.cuerpo_principal{
+  width: 100%;
+  .notacompleta{
+    width: 90%;
+    margin: auto;
+    .redes_nota{
+      display: flex;
+      flex-direction: column;
+      .redes_sociales{
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+}
+      .redes_sociales{
+        .facebook_recetas{
+          @include styles_caja-redes;
+          @include size-mobile_caja-redes;
+          background-color: #3A5898;
+
+          .fa-facebook-f{
+          @include styles_icono-redes;
+          font-size: 30px;
+          left: 16px;
+          top: 6px;
+          }
+        }
+        .twitter_recetas{
+          @include styles_caja-redes;
+          @include size-mobile_caja-redes;
+          background-color: #55ACEE;
+          .fa-twitter{
+           @include styles_icono-redes;
+           font-size: 30px;
+           left: 12px;
+           top: 10px;
+          }
+        }
+      }
+
+
+      .redes_sociales{
+        .google_recetas{
+          @include styles_caja-redes;
+          @include size-mobile_caja-redes;
+          background-color: #DD4B39;
+          .fa-google-plus-g{
+          @include styles_icono-redes;
+          font-size: 30px;
+          left: 8px;
+          top: 8px;
+          }
+        }
+        .instagram_recetas{
+          @include styles_caja-redes;
+          @include size-mobile_caja-redes;
+          background-color: #906348;
+          .fa-instagram{
+           @include styles_icono-redes;
+           font-size: 30px;
+           left: 12px;
+           top: 8px;
+          }
+        }
+      }
+
+      .redes_sociales{
+        .pinterest_recetas{
+          @include styles_caja-redes;
+          @include size-mobile_caja-redes;
+          background-color: #CB2229;
+          .fa-pinterest-p{
+          @include styles_icono-redes;
+          font-size: 30px;
+          left: 14px;
+          top: 10px;
+          }
+        }
+      }
+
+      .column_der{
+        .container_imagen{
+          width: 100%;
+          height: 210px;
+          border-radius: 40px;
+          margin-bottom: 30px;
+          img{
+            width: 100%;
+            border-radius: 40px;
+          }
+      }
+    }
+
+    .nota-1{
+      .fecha_comentarios{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        .autor{
+          @include texto_descripcion_arriba;
+          text-align: left;
+          width: 300px;
+
+        }
+        .iconos_receta{
+          @include texto_descripcion_arriba;
+          width: 150px;
+          display: flex;
+          margin-top: 13px;
+          justify-content: space-between;
+
+        }
+     }
+      .titulo_entrada{
+        @include estilos_titulo_entrada;
+        margin-left: 20px;
+      }
+      .cuerpo_entrada{
+        @include estilos_cuerpo_entrada;
+        height: 180px;
+      }
+
+    }
+  /*styles por Magalí */
+   .nota-1{
+     .pie{
+       font-family: 'IBM plex mono', monospace;
+       color: #929292;
+       blockquote{
+         border-left: 2px solid #FC784E;
+         color: black;
+         margin: 40px 0px;
+         padding-left: 20px;
+         .estela{
+           color: #929292;
+         }
+       }
+       ul{
+         list-style: none;
+         padding:0px;
+
+           li::before{
+             content: "•";
+             margin-right: 9px;
+             color:#FC784E;
+             margin-bottom: 5px;
+
+           }
+
+
+       }
+     }
+   }
+   /*aca finaliza styles por Magalí */
+
+
+
+@media (min-width:800px) {
+  /*------------------------------------------*/
+  /*styles para Home*/
+  /*------------------------------------------*/
+  /*styles por Micol */
+  .menux-mobile {
+       display: none;
+   }
+   .menux-desktop {
+       display: inline;
+   }
+   .navbar-d {
+       height: 50px;
+       background-color: white;
+       font-family: 'IBM Plex Mono', monospace;
+   .dropbtn-d {
+           display: none;
+   }
+   .fa-bars {
+           display: none;
+   }
+   .dropdown-content-d {
+           list-style: none;
+           display: flex;
+           justify-content: center;
+           justify-content: space-around;
+           cursor: pointer;
+           a{
+             text-decoration: none;
+             color: black;
+           }
+   }
+   .dropdown-content-d li:hover {
+           color: orangered;
+   }
+   .platos {
+           position: relative;
+   }
+   .submenu {
+           display: none;
+           position: absolute;
+           list-style: none;
+           z-index: 10;
+   }
+   .platos:hover .submenu {
+           display:block;
+           background-color: whitesmoke;
+   }
+
+   }
+/* aca finaliza styles por Micol */
+
+/*styles por Adriana Montilla */
+  .taco{
+      width:100%;
+      display:none;
+    img{
+      width:100%;
+      display: none;
+      }
+  }
+  .carrousel{
+      justify-content:space-between;
+      height: 500px;
+      .img-container{
+          display:inline-block;
+          width:23%;
+          height: 485px;
+          &:hover{
+            .hover{
+              height: 21%;
+            .fecha{
+                font-size: 12px;
+              }
+            .descripcion{
+                font-size: 14px;
+              }
+            }
+          }
+      }
+  }
+
+/* aca finaliza styles por Adriana Montilla */
+/*styles por Micol : secciones de recetas platos y exoticos */
+.secciones {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  .container {
+      position: relative;
+  }
+  .img-container {
+      width: 300px;
+      margin: auto;
+  }
+  .img-container img {
+      width: 100%;
+      border-radius: 10px;
+  }
+  }
+  /*aca finaliza styles por Micol */
+
+
+  /*styles por Mercedes Ventocilla */
+  .video_perfil_notas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+    .fila_video_perfil{
+      display: flex;
+      .video{
+        display: block;
+        width: 73%;
+        margin-right: 2%;
+        margin-bottom: 40px;
+      }
+
+    }
+  }
+
+.video_perfil_notas{
+  .fila_notas{
+    width: 75%;
+    .linea_nota{
+      display: block;
+      border: 1px solid #E4DFE0;
+      margin-right: 20px;
+    }
+    .nota-1{
+      width: 100%;
+      height: 270px;
+      display: flex;
+      margin-top: 30px;
+      .img_nota_container{
+        display: block;
+        width: 45%;
+        height: 230px;
+        border-radius: 30px;
+        margin-right: 35px;
+        figure{
+          margin: 0;
+        }
+        img{
+          width: 100%;
+          border-radius: 50px;
+          }
+        }
+      }
+     }
+    }
+
+.video_perfil_notas{
+  .fila_notas{
+    .nota-1:last-child{
+      display: flex;
+    }
+  }
+}
+
+
+  .texto_descripcion{
+    width: 55%;
+    margin-right: 20px;
+    .fecha_comentarios{
+      .autor{
+
+        text-align: left;
+        font-size: 14px;
+      }
+      .iconos{
+        justify-content: flex-end;
+        display: flex;
+      }
+    }
+    .titulo_entrada{
+      text-align: left;
+      margin-left: 20px;
+    }
+  }
+
+  .texto_descripcion{
+    .iconos{
+      .iconos_primero{
+        justify-content: flex-end;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .texto_descripcion{
+    .cuerpo_entrada{
+      text-align: left;
+      font-size: 14px;
+      width: 98%;
+      font-weight: normal;
+      button{
+        width: 35%;
+        height: 32px;
+      }
+    }
+  }
+
+.video_perfil_notas{
+  .perfil{
+    width: 25%;
+    .sobremi{
+      width: 100%;
+      font-size: 12px;
+    }
+    .foto{
+      height: 200px;
+      img{
+        height: 200px;
+      }
+    }
+    .Newsletter{
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+}
+
+  .video_perfil_notas{
+    .perfil{
+      .presentacion{
+        .nombre{
+          font-size: 20px;
+        }
+        .edad{
+          font-size: 12px;
+         }
+        }
+      }
+     }
+/*aca finaliza styles por Mercedes Ventocilla */
+/*styles por Magalí */
+  footer {
+    margin-bottom: 20px;
+    .facebook{
+      display: flex;
+      justify-content: center;
+      i{
+        font-size: 17px;
+        margin-top: 2px;
+      }
+      span {
+        margin-left: 12px;
+        display: flex;
+        font-size: 18px;
+      }
+    }
+    .twitter{
+      display: flex;
+      justify-content: center;
+      i{
+        font-size: 17px;
+        margin-top: 2px;
+      }
+      span {
+        margin-left: 12px;
+        display: flex;
+        font-size: 18px;
+      }
+    }
+    .google{
+      display: flex;
+      justify-content: center;
+      i{
+        font-size: 17px;
+        margin-top: 2px;
+      }
+      span {
+        margin-left: 12px;
+        display: flex;
+        font-size: 18px;
+      }
+    }
+    .linkedin{
+      display: flex;
+      justify-content: center;
+      i{
+        font-size: 17px;
+        margin-top: 2px;
+      }
+      span {
+        margin-left: 12px;
+        display: flex;
+        font-size: 18px;
+      }
+    }
+    .instagram{
+      display: flex;
+      justify-content: center;
+      i{
+        font-size: 17px;
+        margin-top: 2px;
+      }
+      span {
+        margin-left: 12px;
+        display: flex;
+        font-size: 18px;
+      }
+    }
+    .youtube{
+      display: flex;
+      justify-content: center;
+      i{
+        font-size: 17px;
+        margin-top: 2px;
+      }
+      span {
+        margin-left: 12px;
+        display: flex;
+        font-size: 18px;
+      }
+    }
+
+    .arrow{
+      display: none;
+    }
+
+  }
+/*aca finaliza styles por Magalí */
+/*aca finaliza styles para Home*/
+/*------------------------------------------*/
+/*styles para Recetas*/
+/*------------------------------------------*/
+/*styles por Adriana receta*/
+  .casa{
+    .casa-container{
+      width: 300px;
+      margin-left:120px;
+      flex-direction: row;
+      justify-content: flex-start;
+      .primer_container{
+        p{
+          font-size: 12px;
+        }
+        .casita{
+          .fa-home{
+            font-size: 12px;
+          }
+        }
+      }
+   }
+ }
+   .casa{
+     .casa-container{
+       .single{
+         margin-left: 10px;
+         p{
+           font-size: 12px;
+           margin: 0;
+        }
+       }
+     }
+   }
+
+/*styles por Mercedes Ventocilla */
+.cuerpo_principal{
+  margin-top: 50px;
+  .notacompleta{
+    width: 50%;  //desktop corregir
+    .redes_nota{
+      flex-direction: row;
+      .redes_sociales{
+        width: 15%;
+        height: 360px;
+        flex-direction: column;
+      }
+    }
+  }
+}
+      .redes_sociales{
+        .facebook_recetas{
+          @include size-desktop_caja-redes;
+        }
+        .twitter_recetas{
+          @include size-desktop_caja-redes;
+        }
+        .google_recetas{
+          @include size-desktop_caja-redes;
+        }
+        .instagram_recetas{
+          @include size-desktop_caja-redes;
+        }
+        .pinterest_recetas{
+          @include size-desktop_caja-redes;
+        }
+
+      }
+
+     .redes_sociales{
+       .facebook_recetas{
+         .fa-facebook-f{
+           font-size: 18px;
+           left: 7px;
+           top: 3px;
+         }
+       }
+       .twitter_recetas{
+         .fa-twitter{
+          font-size: 18px;
+          left: 3px;
+          top: 3px;
+         }
+       }
+       .google_recetas{
+         .fa-google-plus-g{
+         font-size: 18px;
+         left: 3px;
+         top: 3px;
+         }
+       }
+       .instagram_recetas{
+         .fa-instagram{
+          font-size: 18px;
+          left: 4px;
+          top: 3px;
+         }
+       }
+       .pinterest_recetas{
+         .fa-pinterest-p{
+         font-size: 18px;
+         left: 6px;
+         top: 3px;
+         }
+       }
+     }
+
+     .column_der{
+       width: 85%;
+       .container_imagen{
+         height: 380px;
+         margin-bottom: 18px;
+
+       }
+       .nota-1{
+         .cuerpo_entrada{
+           font-size: 13px;
+           height: 70px;
+         }
+       }
+     }
+
+   /*styles por Magalí*/
+     .nota-1{
+       .pie{
+         font-size: 13px;
+       }
+     }
+
+}

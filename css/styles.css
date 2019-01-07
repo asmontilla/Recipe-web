@@ -1,0 +1,1003 @@
+@charset "UTF-8";
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+/*Naty por favor recuerda que los hovers del carrousel se ven bien en la compu de adri, a pesar de que nos repartimos las secciones
+a cada una y detallamos nuestros nombres siepre nos mestimos todas en el codigo de cada una*/
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------*/
+/*styles para Home*/
+/*------------------------------------------*/
+/*styles por Micol */
+body {
+  margin: 0%;
+}
+
+header {
+  font-family: "Indie Flower", cursive;
+  text-align: center;
+  color: orangered;
+}
+
+.navbar-m {
+  width: 100%;
+  background-color: orangered;
+  font-family: "IBM Plex Mono", monospace;
+  border-radius: 10px;
+}
+
+.dropbtn-m {
+  background-color: orangered;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown-m {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.dropdown-m .fa-bars {
+  margin-top: 17px;
+  color: white;
+}
+
+.dropdown-content-m {
+  display: none;
+  position: absolute;
+  list-style: none;
+  background-color: orangered;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content-m li {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+.dropdown-content-m li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menux-mobile {
+  display: block;
+}
+
+.dropdown-content-m li:hover {
+  background-color: orangered;
+}
+
+.dropdown-m:hover .dropdown-content-m {
+  display: block;
+}
+
+.dropdown-m:hover .dropbtn-m {
+  background-color: orangered;
+}
+
+.menux-desktop {
+  display: none;
+}
+
+/* aca finaliza styles por Micol */
+/*styles por Adriana Montilla */
+.carrousel {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.carrousel .img-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 450px;
+  font-family: "IBM Plex Mono", monospace;
+  color: white;
+}
+.carrousel .img-container:hover .hover {
+  height: 30%;
+}
+.carrousel .img-container img {
+  width: 100%;
+}
+.carrousel .img-container .hover {
+  position: absolute;
+  bottom: 0%;
+  background-color: orangered;
+  opacity: 0.5;
+  width: 100%;
+  transition: height 1s;
+  overflow: hidden;
+  height: 0%;
+}
+.carrousel .img-container .hover .fecha {
+  margin-left: 10px;
+}
+.carrousel .img-container .hover .descripcion {
+  margin-left: 10px;
+}
+.carrousel .nati {
+  display: none;
+}
+
+/* aca finaliza styles por Adriana Montilla */
+/*styles por Micol */
+.secciones {
+  flex-direction: column;
+}
+.secciones .container {
+  width: 200px;
+  position: relative;
+}
+.secciones .img-container {
+  width: 300px;
+  height: 200px;
+}
+.secciones .img-container img {
+  width: 100%;
+}
+.secciones .button {
+  width: 150px;
+  border-radius: 10px;
+  font-family: "IBM Plex Mono", monospace;
+  text-align: center;
+  background-color: #ddd;
+  position: absolute;
+  top: 60px;
+  left: 70px;
+}
+.secciones:hover {
+  cursor: pointer;
+}
+.secciones:hover .button:hover {
+  background-color: orangered;
+}
+.secciones .link-r {
+  text-decoration: none;
+  color: black;
+}
+
+/*aca finaliza styles por Micol */
+/*styles por Mercedes Ventocilla */
+/*variables, mixins*/
+/*section: video_perfil_notas | video*/
+body {
+  margin: 0;
+}
+body .fila_video_perfil .video {
+  display: none;
+}
+body .fila_video_perfil .video .video_descripcion {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  color: #929292;
+}
+
+/*section: video_perfil_notas | notas*/
+.video_perfil_notas {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.video_perfil_notas .fila_notas .nota-1 {
+  width: 90%;
+  margin: auto;
+}
+.video_perfil_notas .fila_notas .nota-1 .img_nota_container {
+  display: none;
+}
+
+.video_perfil_notas .fila_notas .linea_nota {
+  display: none;
+}
+.video_perfil_notas .fila_notas .nota-1:last-child {
+  display: none;
+}
+
+.nota-1 .fecha_comentarios {
+  display: flex;
+  justify-content: space-between;
+}
+.nota-1 .fecha_comentarios .mayo {
+  width: 50%;
+  text-align: center;
+  font-family: "IBM Plex Mono", monospace;
+  color: #929292;
+  font-size: 14px;
+}
+.nota-1 .fecha_comentarios .mayo p {
+  margin: 0;
+}
+
+.fecha_comentarios .iconos {
+  font-family: "IBM Plex Mono", monospace;
+  color: #929292;
+  font-size: 14px;
+  display: block;
+  width: 28%;
+}
+.fecha_comentarios .iconos .iconos_primero {
+  display: flex;
+  margin: auto;
+  width: 80%;
+}
+.fecha_comentarios .iconos .iconos_primero .icon_heart {
+  font-size: 15px;
+  color: #929292;
+}
+.fecha_comentarios .iconos .iconos_primero .favoritos {
+  margin-right: 15px;
+}
+.fecha_comentarios .iconos .iconos_primero .icon_comment {
+  font-size: 15px;
+  color: #929292;
+}
+
+.fecha_comentarios .iconos .icon_share {
+  font-size: 15px;
+  color: #929292;
+  margin: auto;
+  width: 12%;
+}
+
+.texto_descripcion .titulo_entrada {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+.texto_descripcion .cuerpo_entrada {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: normal;
+  color: #929292;
+  font-size: 17px;
+  text-align: center;
+}
+.texto_descripcion button {
+  background-color: #FDE2DA;
+  color: black;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  border: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/*video_perfil_notas | perfil*/
+.perfil .sobremi {
+  font-size: 15px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  width: 90%;
+  height: 30px;
+  margin: auto;
+  background-color: #FDE2DA;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.perfil .foto {
+  border-radius: 50%;
+  width: 68%;
+  height: 240px;
+  margin: 21px auto;
+}
+.perfil .foto img {
+  width: 100%;
+  height: 240px;
+  border-radius: 50%;
+}
+
+.perfil .presentacion {
+  width: 90%;
+  margin: auto;
+}
+.perfil .presentacion .nombre {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+.perfil .presentacion .edad {
+  font-family: "IBM Plex Mono", monospace;
+  color: #929292;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.perfil .Newsletter {
+  font-size: 15px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  width: 90%;
+  height: 30px;
+  margin: auto;
+  background-color: #FDE2DA;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*aca finaliza styles por Mercedes Ventocilla */
+/*styles por Magalí */
+footer {
+  border-bottom: 2px solid #E6E6E6;
+  display: flex;
+  justify-content: space-around;
+  font-family: "IBM plex mono", monospace;
+  color: #A4A4A4;
+  font-size: 18px;
+  margin-top: 36px;
+}
+footer i {
+  padding-bottom: 60px;
+}
+footer span {
+  display: none;
+}
+footer .arrow {
+  color: #FB8A01;
+  font-size: 50px;
+  position: absolute;
+  text-align: center;
+  margin-top: 60px;
+}
+
+/*aca finaliza styles por Magalí */
+/*aca finaliza styles para Home*/
+/*------------------------------------------*/
+/*styles para Recetas*/
+/*------------------------------------------*/
+/*styles por Mercedes Ventocilla */
+body {
+  margin: 0;
+}
+
+.main-container .banner {
+  width: 100%;
+  margin-top: 25px;
+}
+.main-container .banner figure {
+  margin: 0;
+}
+.main-container .banner figure img {
+  width: 100%;
+}
+
+/* aca finaliza styles por Mercedes Ventocilla */
+.casa {
+  font-family: "IBM plex mono", monospace;
+}
+.casa .casa-container {
+  width: 90%;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.casa .casa-container .primer_container {
+  display: flex;
+}
+.casa .casa-container .primer_container p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 10px;
+}
+.casa .casa-container .primer_container p::after {
+  content: ">";
+  margin-left: 10px;
+}
+.casa .casa-container .primer_container .casita {
+  display: flex;
+}
+.casa .casa-container .primer_container .casita .fa-home {
+  font-size: 18px;
+  margin-top: 2px;
+}
+.casa .casa-container .single {
+  color: #929292;
+}
+.casa .casa-container .single p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.casa .casa-container .single p::after {
+  content: "";
+}
+
+/*aca finaliza styles por Adri Montilla */
+/*styles por Mercedes Ventocilla */
+.cuerpo_principal {
+  width: 100%;
+}
+.cuerpo_principal .notacompleta {
+  width: 90%;
+  margin: auto;
+}
+.cuerpo_principal .notacompleta .redes_nota {
+  display: flex;
+  flex-direction: column;
+}
+.cuerpo_principal .notacompleta .redes_nota .redes_sociales {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.redes_sociales .facebook_recetas {
+  border-radius: 50%;
+  position: relative;
+  margin: 8px;
+  width: 50px;
+  height: 50px;
+  background-color: #3A5898;
+}
+.redes_sociales .facebook_recetas .fa-facebook-f {
+  position: absolute;
+  color: #fff;
+  font-size: 30px;
+  left: 16px;
+  top: 6px;
+}
+.redes_sociales .twitter_recetas {
+  border-radius: 50%;
+  position: relative;
+  margin: 8px;
+  width: 50px;
+  height: 50px;
+  background-color: #55ACEE;
+}
+.redes_sociales .twitter_recetas .fa-twitter {
+  position: absolute;
+  color: #fff;
+  font-size: 30px;
+  left: 12px;
+  top: 10px;
+}
+
+.redes_sociales .google_recetas {
+  border-radius: 50%;
+  position: relative;
+  margin: 8px;
+  width: 50px;
+  height: 50px;
+  background-color: #DD4B39;
+}
+.redes_sociales .google_recetas .fa-google-plus-g {
+  position: absolute;
+  color: #fff;
+  font-size: 30px;
+  left: 8px;
+  top: 8px;
+}
+.redes_sociales .instagram_recetas {
+  border-radius: 50%;
+  position: relative;
+  margin: 8px;
+  width: 50px;
+  height: 50px;
+  background-color: #906348;
+}
+.redes_sociales .instagram_recetas .fa-instagram {
+  position: absolute;
+  color: #fff;
+  font-size: 30px;
+  left: 12px;
+  top: 8px;
+}
+
+.redes_sociales .pinterest_recetas {
+  border-radius: 50%;
+  position: relative;
+  margin: 8px;
+  width: 50px;
+  height: 50px;
+  background-color: #CB2229;
+}
+.redes_sociales .pinterest_recetas .fa-pinterest-p {
+  position: absolute;
+  color: #fff;
+  font-size: 30px;
+  left: 14px;
+  top: 10px;
+}
+
+.column_der .container_imagen {
+  width: 100%;
+  height: 210px;
+  border-radius: 40px;
+  margin-bottom: 30px;
+}
+.column_der .container_imagen img {
+  width: 100%;
+  border-radius: 40px;
+}
+
+.nota-1 .fecha_comentarios {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.nota-1 .fecha_comentarios .autor {
+  font-family: "IBM Plex Mono", monospace;
+  color: #929292;
+  font-size: 14px;
+  text-align: left;
+  width: 300px;
+}
+.nota-1 .fecha_comentarios .iconos_receta {
+  font-family: "IBM Plex Mono", monospace;
+  color: #929292;
+  font-size: 14px;
+  width: 150px;
+  display: flex;
+  margin-top: 13px;
+  justify-content: space-between;
+}
+.nota-1 .titulo_entrada {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.nota-1 .cuerpo_entrada {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: normal;
+  color: #929292;
+  font-size: 17px;
+  height: 180px;
+}
+
+/*styles por Magalí */
+.nota-1 .pie {
+  font-family: "IBM plex mono", monospace;
+  color: #929292;
+}
+.nota-1 .pie blockquote {
+  border-left: 2px solid #FC784E;
+  color: black;
+  margin: 40px 0px;
+  padding-left: 20px;
+}
+.nota-1 .pie blockquote .estela {
+  color: #929292;
+}
+.nota-1 .pie ul {
+  list-style: none;
+  padding: 0px;
+}
+.nota-1 .pie ul li::before {
+  content: "•";
+  margin-right: 9px;
+  color: #FC784E;
+  margin-bottom: 5px;
+}
+
+/*aca finaliza styles por Magalí */
+@media (min-width: 800px) {
+  /*------------------------------------------*/
+  /*styles para Home*/
+  /*------------------------------------------*/
+  /*styles por Micol */
+  .menux-mobile {
+    display: none;
+  }
+
+  .menux-desktop {
+    display: inline;
+  }
+
+  .navbar-d {
+    height: 50px;
+    background-color: white;
+    font-family: "IBM Plex Mono", monospace;
+  }
+  .navbar-d .dropbtn-d {
+    display: none;
+  }
+  .navbar-d .fa-bars {
+    display: none;
+  }
+  .navbar-d .dropdown-content-d {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+  .navbar-d .dropdown-content-d a {
+    text-decoration: none;
+    color: black;
+  }
+  .navbar-d .dropdown-content-d li:hover {
+    color: orangered;
+  }
+  .navbar-d .platos {
+    position: relative;
+  }
+  .navbar-d .submenu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    z-index: 10;
+  }
+  .navbar-d .platos:hover .submenu {
+    display: block;
+    background-color: whitesmoke;
+  }
+
+  /* aca finaliza styles por Micol */
+  /*styles por Adriana Montilla */
+  .taco {
+    width: 100%;
+    display: none;
+  }
+  .taco img {
+    width: 100%;
+    display: none;
+  }
+
+  .carrousel {
+    justify-content: space-between;
+    height: 500px;
+  }
+  .carrousel .img-container {
+    display: inline-block;
+    width: 23%;
+    height: 485px;
+  }
+  .carrousel .img-container:hover .hover {
+    height: 21%;
+  }
+  .carrousel .img-container:hover .hover .fecha {
+    font-size: 12px;
+  }
+  .carrousel .img-container:hover .hover .descripcion {
+    font-size: 14px;
+  }
+
+  /* aca finaliza styles por Adriana Montilla */
+  /*styles por Micol : secciones de recetas platos y exoticos */
+  .secciones {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+  }
+  .secciones .container {
+    position: relative;
+  }
+  .secciones .img-container {
+    width: 300px;
+    margin: auto;
+  }
+  .secciones .img-container img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  /*aca finaliza styles por Micol */
+  /*styles por Mercedes Ventocilla */
+  .video_perfil_notas {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+  }
+  .video_perfil_notas .fila_video_perfil {
+    display: flex;
+  }
+  .video_perfil_notas .fila_video_perfil .video {
+    display: block;
+    width: 73%;
+    margin-right: 2%;
+    margin-bottom: 40px;
+  }
+
+  .video_perfil_notas .fila_notas {
+    width: 75%;
+  }
+  .video_perfil_notas .fila_notas .linea_nota {
+    display: block;
+    border: 1px solid #E4DFE0;
+    margin-right: 20px;
+  }
+  .video_perfil_notas .fila_notas .nota-1 {
+    width: 100%;
+    height: 270px;
+    display: flex;
+    margin-top: 30px;
+  }
+  .video_perfil_notas .fila_notas .nota-1 .img_nota_container {
+    display: block;
+    width: 45%;
+    height: 230px;
+    border-radius: 30px;
+    margin-right: 35px;
+  }
+  .video_perfil_notas .fila_notas .nota-1 .img_nota_container figure {
+    margin: 0;
+  }
+  .video_perfil_notas .fila_notas .nota-1 .img_nota_container img {
+    width: 100%;
+    border-radius: 50px;
+  }
+
+  .video_perfil_notas .fila_notas .nota-1:last-child {
+    display: flex;
+  }
+
+  .texto_descripcion {
+    width: 55%;
+    margin-right: 20px;
+  }
+  .texto_descripcion .fecha_comentarios .autor {
+    text-align: left;
+    font-size: 14px;
+  }
+  .texto_descripcion .fecha_comentarios .iconos {
+    justify-content: flex-end;
+    display: flex;
+  }
+  .texto_descripcion .titulo_entrada {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .texto_descripcion .iconos .iconos_primero {
+    justify-content: flex-end;
+    margin-right: 10px;
+  }
+
+  .texto_descripcion .cuerpo_entrada {
+    text-align: left;
+    font-size: 14px;
+    width: 98%;
+    font-weight: normal;
+  }
+  .texto_descripcion .cuerpo_entrada button {
+    width: 35%;
+    height: 32px;
+  }
+
+  .video_perfil_notas .perfil {
+    width: 25%;
+  }
+  .video_perfil_notas .perfil .sobremi {
+    width: 100%;
+    font-size: 12px;
+  }
+  .video_perfil_notas .perfil .foto {
+    height: 200px;
+  }
+  .video_perfil_notas .perfil .foto img {
+    height: 200px;
+  }
+  .video_perfil_notas .perfil .Newsletter {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .video_perfil_notas .perfil .presentacion .nombre {
+    font-size: 20px;
+  }
+  .video_perfil_notas .perfil .presentacion .edad {
+    font-size: 12px;
+  }
+
+  /*aca finaliza styles por Mercedes Ventocilla */
+  /*styles por Magalí */
+  footer {
+    margin-bottom: 20px;
+  }
+  footer .facebook {
+    display: flex;
+    justify-content: center;
+  }
+  footer .facebook i {
+    font-size: 17px;
+    margin-top: 2px;
+  }
+  footer .facebook span {
+    margin-left: 12px;
+    display: flex;
+    font-size: 18px;
+  }
+  footer .twitter {
+    display: flex;
+    justify-content: center;
+  }
+  footer .twitter i {
+    font-size: 17px;
+    margin-top: 2px;
+  }
+  footer .twitter span {
+    margin-left: 12px;
+    display: flex;
+    font-size: 18px;
+  }
+  footer .google {
+    display: flex;
+    justify-content: center;
+  }
+  footer .google i {
+    font-size: 17px;
+    margin-top: 2px;
+  }
+  footer .google span {
+    margin-left: 12px;
+    display: flex;
+    font-size: 18px;
+  }
+  footer .linkedin {
+    display: flex;
+    justify-content: center;
+  }
+  footer .linkedin i {
+    font-size: 17px;
+    margin-top: 2px;
+  }
+  footer .linkedin span {
+    margin-left: 12px;
+    display: flex;
+    font-size: 18px;
+  }
+  footer .instagram {
+    display: flex;
+    justify-content: center;
+  }
+  footer .instagram i {
+    font-size: 17px;
+    margin-top: 2px;
+  }
+  footer .instagram span {
+    margin-left: 12px;
+    display: flex;
+    font-size: 18px;
+  }
+  footer .youtube {
+    display: flex;
+    justify-content: center;
+  }
+  footer .youtube i {
+    font-size: 17px;
+    margin-top: 2px;
+  }
+  footer .youtube span {
+    margin-left: 12px;
+    display: flex;
+    font-size: 18px;
+  }
+  footer .arrow {
+    display: none;
+  }
+
+  /*aca finaliza styles por Magalí */
+  /*aca finaliza styles para Home*/
+  /*------------------------------------------*/
+  /*styles para Recetas*/
+  /*------------------------------------------*/
+  /*styles por Adriana receta*/
+  .casa .casa-container {
+    width: 300px;
+    margin-left: 120px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .casa .casa-container .primer_container p {
+    font-size: 12px;
+  }
+  .casa .casa-container .primer_container .casita .fa-home {
+    font-size: 12px;
+  }
+
+  .casa .casa-container .single {
+    margin-left: 10px;
+  }
+  .casa .casa-container .single p {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  /*styles por Mercedes Ventocilla */
+  .cuerpo_principal {
+    margin-top: 50px;
+  }
+  .cuerpo_principal .notacompleta {
+    width: 50%;
+  }
+  .cuerpo_principal .notacompleta .redes_nota {
+    flex-direction: row;
+  }
+  .cuerpo_principal .notacompleta .redes_nota .redes_sociales {
+    width: 15%;
+    height: 360px;
+    flex-direction: column;
+  }
+
+  .redes_sociales .facebook_recetas {
+    width: 25px;
+    height: 25px;
+  }
+  .redes_sociales .twitter_recetas {
+    width: 25px;
+    height: 25px;
+  }
+  .redes_sociales .google_recetas {
+    width: 25px;
+    height: 25px;
+  }
+  .redes_sociales .instagram_recetas {
+    width: 25px;
+    height: 25px;
+  }
+  .redes_sociales .pinterest_recetas {
+    width: 25px;
+    height: 25px;
+  }
+
+  .redes_sociales .facebook_recetas .fa-facebook-f {
+    font-size: 18px;
+    left: 7px;
+    top: 3px;
+  }
+  .redes_sociales .twitter_recetas .fa-twitter {
+    font-size: 18px;
+    left: 3px;
+    top: 3px;
+  }
+  .redes_sociales .google_recetas .fa-google-plus-g {
+    font-size: 18px;
+    left: 3px;
+    top: 3px;
+  }
+  .redes_sociales .instagram_recetas .fa-instagram {
+    font-size: 18px;
+    left: 4px;
+    top: 3px;
+  }
+  .redes_sociales .pinterest_recetas .fa-pinterest-p {
+    font-size: 18px;
+    left: 6px;
+    top: 3px;
+  }
+
+  .column_der {
+    width: 85%;
+  }
+  .column_der .container_imagen {
+    height: 380px;
+    margin-bottom: 18px;
+  }
+  .column_der .nota-1 .cuerpo_entrada {
+    font-size: 13px;
+    height: 70px;
+  }
+
+  /*styles por Magalí*/
+  .nota-1 .pie {
+    font-size: 13px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
